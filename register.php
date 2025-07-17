@@ -25,11 +25,11 @@ if (isset($_POST['submit'])) {
 
     // Validate age
     if ($age <= 0) {
-        echo "<p style='color: red;'>❌ Age must be a positive number.</p>";
+        echo "<p style='color: red;'> Age must be a positive number.</p>";
     }
     // Validate name (only letters and spaces)
     elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) {
-        echo "<p style='color: red;'>❌ Name must contain only letters and spaces.</p>";
+        echo "<p style='color: red;'> Name must contain only letters and spaces.</p>";
     }
     else {
         // Safe to insert into DB
@@ -38,9 +38,9 @@ if (isset($_POST['submit'])) {
         $stmt->bind_param("si", $name, $age);
 
         if ($stmt->execute()) {
-            echo "<p style='color: green;'>✅ User registered successfully!</p>";
+            echo "<p style='color: green;'> User registered successfully!</p>";
         } else {
-            echo "<p style='color: red;'>❌ Error: " . $stmt->error . "</p>";
+            echo "<p style='color: red;'> Error: " . $stmt->error . "</p>";
         }
 
         $stmt->close();

@@ -30,11 +30,11 @@ if (isset($_GET["logout"])) {
 <body>
     <?php
     if (isset($_SESSION["user"])) {
-        echo "<h3>✅ Welcome back, " . htmlspecialchars($_SESSION["user"]) . "!</h3>";
+        echo "<h3>Welcome back, " . htmlspecialchars($_SESSION["user"]) . "!</h3>";
         echo "<a href='session.php?logout=true'>🚪 Logout</a>";
     } else {
     ?>
-        <h3>👋 Hello! What's your name?</h3>
+        <h3>Hello! What's your name?</h3>
         <form method="POST" action="session.php">
             <input type="text" name="username" required>
             <input type="submit" value="Save My Name">

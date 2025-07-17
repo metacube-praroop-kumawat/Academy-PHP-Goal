@@ -17,9 +17,9 @@
 
         // Save content to file
         if (file_put_contents($filename, $content)) {
-            echo "<p style='color:green;'>✅ File saved as <strong>$filename</strong></p>";
+            echo "<p style='color:green;'>File saved as <strong>$filename</strong></p>";
         } else {
-            echo "<p style='color:red;'>❌ Failed to write to file.</p>";
+            echo "<p style='color:red;'>Failed to write to file.</p>";
         }
     }
     ?>
