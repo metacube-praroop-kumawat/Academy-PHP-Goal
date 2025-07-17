@@ -31,7 +31,7 @@ if (isset($_GET["logout"])) {
     <?php
     if (isset($_SESSION["user"])) {
         echo "<h3>Welcome back, " . htmlspecialchars($_SESSION["user"]) . "!</h3>";
-        echo "<a href='session.php?logout=true'>🚪 Logout</a>";
+        echo "<a href='session.php?logout=true'> Logout</a>";
     } else {
     ?>
         <h3>Hello! What's your name?</h3>

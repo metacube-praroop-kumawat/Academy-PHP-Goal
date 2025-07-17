@@ -10,7 +10,7 @@ $conn = new mysqli($host, $user, $pass, $db, $port);
 
 // Always show full error
 if ($conn->connect_error) {
-    die("❌ Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected to DB!";
 ?>
